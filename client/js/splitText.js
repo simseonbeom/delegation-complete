@@ -10,6 +10,15 @@
 // 해당 코드의 저작권은 GSAP에게 있습니다.
 // 해당 코드의 저작권은 GSAP에게 있습니다.
 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+
+
 // 상업용으로 사용 금지 
 
 // https://gsap.com/
@@ -473,3 +482,10 @@
 // 해당 코드의 저작권은 GSAP에게 있습니다.
 // 해당 코드의 저작권은 GSAP에게 있습니다.
 // 해당 코드의 저작권은 GSAP에게 있습니다.
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
+// The copyright of the code is in gsap 
