@@ -33,24 +33,56 @@ const data = [
 
 
 
+/* -------------------------------------------- */
+/*              이벤트 위임 처리 안하고 잡는 방법             */
+/* -------------------------------------------- */
 const list = $('.navigation > li')
 
-
-// 이벤트 위임 처리 안하고 잡는 방법
-
-$('.navigation > li').click(function(){
+// $('.navigation > li').click(function(){
   
-  let index = $(this).index();
+//   let index = $(this).index();
 
-  $('.visual img').attr({
-    'src':`./assets/part01/${data[index].src}`,
-    'alt':data[index].alt
-  })
+//   $('.visual img').attr({
+//     'src':`./assets/part01/${data[index].src}`,
+//     'alt':data[index].alt
+//   })
 
-  $('.navigation > li').removeClass('is-active')
+//   $('.navigation > li').removeClass('is-active')
+//   $(this).addClass('is-active');
+
+//   return false;
+
+// })
+
+
+
+
+
+
+/* -------------------------------------------- */
+/*                이벤트 위임으로 잡는 방법                */
+/* -------------------------------------------- */
+
+
+
+
+
+$('.navigation').on('click','li',function(e){
+
+  e.preventDefault();
+
+  let index = $(this).attr('data-index');
+
+
+  $('.navigation > li').removeClass('is-active');
   $(this).addClass('is-active');
 
-  return false;
+
+  $('.visual img').attr({
+    'src':`./assets/part01/${data[index-1].src}`,
+    'alt': data[index-1].alt
+  })
+
 
 })
 
@@ -60,17 +92,6 @@ $('.navigation > li').click(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-// 이벤트 위임으로 잡는 방법 
 
 
 
