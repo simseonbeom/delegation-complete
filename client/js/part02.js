@@ -25,6 +25,111 @@ const data = [
 ]
 
 
+// 1. 자바스크립트 버전 ⬆ 문법 쉬움 
+// 2. 느림. 엔진 무거움 
+// 3. Single Page Application 웹사이트 구현 못함 (react,vue,svelt)
+
+
+
+
+
+// 모든 li 수집 => 배열 => forEach ... removeClass
+
+// const navigation = $('.navigation');
+
+// $('.navigation').on('click','li',function(){
+
+//   const index = $(this).attr('data-index');
+
+//   $('.visual img').attr({
+//     'src':`./assets/part01/${data[index-1].src}`,
+//     'alt':data[index-1].alt
+//   })
+
+//   $('.navigation > li').removeClass('is-active');
+
+//   $(this).addClass('is-active');
+
+
+//   return false;
+
+// })
+
+
+
+
+
+
+// jQuery 
+
+
+$('.navigation > li').on('click',function(e){
+
+  e.preventDefault();
+
+  const index = $(this).index();
+
+  // $(this).fadeOut();
+
+  $('.navigation > li').removeClass('is-active');
+  $(this).addClass('is-active');
+
+  $('.visual img').attr({
+    'src':`./assets/part01/${data[index].src}`,
+    'alt':data[index].alt
+  })
+
+})
+
+
+// const list = document.querySelectorAll('.navigation > li');
+
+
+
+// list.forEach((li,index)=>{
+
+//   li.addEventListener('click',()=>{
+//     console.log( index );
+//   })
+
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const $ = {
+//   on(type,delegation,callback){
+//     target.closest(delegation)
+//     if(...) return 
+
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

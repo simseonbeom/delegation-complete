@@ -23,6 +23,77 @@ const data = [
 
 
 
+const swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 4000,
+  },
+  loop: true,
+  speed: 2000,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  parallax: true,
+  pagination: {
+    el: ".pagination",
+    clickable: true,
+    bulletClass: "bullet",
+    bulletActiveClass: "is-active",
+    renderBullet: function (index, className) {
+      return /* html */ `
+        <span class="${className}">
+          <img src="./assets/part01/${data[index].src}" alt="${data[index].alt}.jpg" />
+        </span>
+      `;
+    },
+    // type:'fraction'
+  },
+});
+
+
+const split = new SplitText('h3',{type:'chars'})
+
+
+swiper
+.on('slideChangeTransitionStart',function(){
+  gsap.to(split.chars,{
+    yPercent:120,
+    stagger:0.05,
+  })
+})
+.on('slideChangeTransitionEnd',function(){
+  gsap.to(split.chars,{
+    yPercent:0,
+    stagger:0.05,
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -29,10 +29,7 @@ const data = [
 
 
 const navigation = getNode('.navigation');
-// const list = getNodes('.navigation li');
 const visualImage = getNode('.visual img');
-
-
 
 function handleSlide(e){
 
@@ -50,14 +47,12 @@ function handleSlide(e){
   attr(visualImage,'src',`./assets/part01/${data[index-1].src}`);
   attr(visualImage,'alt',data[index-1].alt);
 
+
+
   list.forEach(li => removeClass(li,'is-active'))
 
   addClass(target,'is-active');
-
-
 }
-
-
 
 navigation.addEventListener('click',handleSlide);
 
