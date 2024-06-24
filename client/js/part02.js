@@ -27,6 +27,85 @@ const data = [
 
 
 
+// 1. 너무 무거움
+// 2. pure javascript 가 jQuery 처럼 쉬워진다면?
+// 3. single Page Application X 
+// ajax
+// fetch API => axios
+
+// const list = [...document.querySelectorAll('.navigation > li')];
+
+// list.forEach((li,index)=>{
+//   li.addEventListener('click',()=>{
+//       console.log(index);
+//   })
+// })
+
+// $('.navigation > li').click(function(e){
+
+//   e.preventDefault();
+
+//   const index = $(this).index();
+
+
+//   $('.navigation > li').removeClass('is-active');
+
+//   $(this).addClass('is-active');
+
+//   $('.visual img').attr({
+//     'src': `./assets/part01/${data[index].src}`,
+//     'alt': data[index].alt
+//   })
+
+// })
+
+
+$('.navigation').on('click','li',function(e){
+  e.preventDefault();
+
+  const index = $(this).attr('data-index');
+
+
+  $('.navigation > li').removeClass('is-active');
+
+  $(this).addClass('is-active');
+
+  $('.visual img').attr({
+    'src': `./assets/part01/${data[index-1].src}`,
+    'alt': data[index-1].alt
+  })
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
