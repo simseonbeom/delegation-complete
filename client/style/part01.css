@@ -86,3 +86,65 @@
 
 }
 
+
+/* ============================================================
+   part02 jQuery 예제용 스타일
+   ============================================================ */
+
+/* 예제 4 — 마우스를 따라다니는 커서 */
+.cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;     /* 커서를 마우스 포인터 정중앙에 */
+  border: 1px solid brown;
+  border-radius: 50%;
+  pointer-events: none;        /* 커서가 클릭을 가로채지 않도록 */
+  transition: transform .2s, background-color .2s;
+  z-index: 9999;
+}
+
+.cursor.is-big{
+  transform: scale(3);
+  background-color: rgba(165, 42, 42, .15);
+}
+
+
+/* 예제 8 — 스크롤 진행 바 */
+.progress{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;                    /* jQuery 가 % 로 늘려준다 */
+  height: 5px;
+  background-color: brown;
+  z-index: 9999;
+}
+
+.scroll-demo-btn{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: .6rem 1rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: .85rem;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* 스크롤 데모를 켰을 때만 문서를 길게 만든다 */
+body.is-scroll-demo{
+  min-height: 300vh;
+}
+
+body.is-scroll-demo .container{
+  position: static;
+  transform: none;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
